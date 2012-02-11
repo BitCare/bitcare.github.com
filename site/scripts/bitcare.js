@@ -1,12 +1,12 @@
 $(function() {
-	$('#header h1 a').bind('click',function(event){
+	$('#header h1 a').click( function(event){
         $('html, body').stop().animate({
             scrollTop: 0
         }, 800);
         event.preventDefault();
         //return false;
     });
-	$('ul#menu a').bind('click',function(event){
+	$('ul#menu a').click( function(event){
         var $anchor = $(this);
         var v = $($anchor.attr('href')).offset().top - 60;
         
