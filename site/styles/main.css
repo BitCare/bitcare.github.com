@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+/* CSS Reset rules */
+/* --------------- */
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code,
+col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,
+ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,
+sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;   /* baseline; */
+}
+body {
+    background: #f3f5f0;
+    color: #2f3540;  
+    font-family: Arial, Helvetica, Sans-serif;
+    font-size: 12pt;  
+}
+
+h1 {font-size: 1.5em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.3em;}
+h4 {font-size: 1.2em;}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+
+a {color: #d6392b; text-decoration: none };
+
+/* a:link {color: #247D9E;} */
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:focus {text-decoration: none; outline: none;}
+a:hover, a:active {outline: none;}
+
+table {
+  	border-collapse: collapse;
+ 	border-spacing: 0;
+  	font-size:100%;
+  	width: 100%;
+}
+
+ul, ol { list-style: none; }
+
+/* Basic page structure */
+/* -------------------- */
+.outer {
+	width: 100%;
+	text-align: center;			/* IE Quirk */
+}
+.inner {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;			/* IE Quirk */
+}
+#header {
+    background-color: #ffffff; 
+    box-shadow: 0 0 10px #575757;
+    -moz-box-shadow: 0 0 10px #575757;
+    -webkit-box-shadow:0 0 10px #575757; 
+	height: 60px;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right : 0;
+	left: 0;
+}
+#header > .inner {
+}
+#header h1 { 
+	background: url('images/bitcare.png') no-repeat scroll 0 0 transparent;
+	float: left;
+	width: 150px; height:50px;
+}
+#header h1 a {display: inline-block; padding: 15px 0; width: 150px; text-indent: -9999px; }
+
+#header ul#menu { float: right; padding-top: 28px;}
+#header ul#menu li { display: block; float: left; padding: 0 20px; }
+#header ul#menu li a {display: inline-block; }
+
+#intro { background-color: #d9d1ca; position:fixed; top:60px; height: 360px; padding-top: 20px; z-index: 0; }
+
+#intro div.body { float: left; width: 430px; }
+#intro div.body h1 {font-size: 3em;  padding-bottom: 10px; }
+#intro div.body p {font-size: 1.6em; }
+
+#intro div.image { float: right; width: 510px;}
+#intro div.image img { border: 1px solid #999999;}
+
+#scroll { position: absolute; top:440px; z-index: 100}
+
+#content { background-color: #f3f5f0; min-height: 1300px; }
+#content .section {padding-top: 20px; min-height:600px;}
+	
+#content h2 { font-size: 3em; color: #d6392b;}
+#content h3 { font-size: 2em; color: #575757;}
+
+
+
+
+#footer {
+	background-color: #ffffff; 
+    box-shadow: 0px 0px 10px #575757;
+    -moz-box-shadow: 0px 0px 10px #575757;
+    -webkit-box-shadow:0px 0px 10px #575757;
+	height: 60px;
+}
+#footer > .inner {
+	padding: 20px 0px;
+	text-align: right;
+}
+
+	
+
+
