@@ -1,8 +1,9 @@
 $(function() {
 	$('#header h1 a').click( function(event){
-        $('html, body').stop().animate({
-            scrollTop: 0
-        }, 800);
+//        $('html, body').stop().animate({
+//            scrollTop: 0
+//        }, 800);
+        window.scrollTo(0, 0);
         //event.preventDefault();
         return false;
     });
