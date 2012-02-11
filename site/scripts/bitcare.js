@@ -3,14 +3,18 @@ $(function() {
         $('html, body').stop().animate({
             scrollTop: 0
         }, 800);
-	
-        return false;
+        event.preventDefault();
+        //return false;
     });
 	$('ul#menu a').bind('click',function(event){
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 60
-        }, 800);
-        return false;
+        var v = $($anchor.attr('href')).offset().top - 60;
+        
+        window.scrollTo(0, v);
+        
+//        $('html, body').stop().animate({
+//            scrollTop: $($anchor.attr('href')).offset().top - 60
+//        }, 800);
+        event.preventDefault();
     });
 });

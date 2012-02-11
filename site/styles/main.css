@@ -77,7 +77,7 @@ ul, ol { list-style: none; }
 #header ul#menu li { display: block; float: left; padding: 0 20px; }
 #header ul#menu li a {display: inline-block; }
 
-#intro { background-color: #d9d1ca; position:fixed; top:60px; height: 360px; padding-top: 20px; z-index: 0; }
+#intro { background-color: #d9d1ca; position:fixed; top:60px; height: 360px; padding-top: 20px; z-index: 10; }
 
 #intro div.body { float: left; width: 430px; }
 #intro div.body h1 {font-size: 3em;  padding-bottom: 10px; }
