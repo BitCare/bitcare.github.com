@@ -10,6 +10,7 @@ $(function() {
         var $anchor = $(this);
         var v = $($anchor.attr('href')).offset().top - 60;
         
+        $('#test').html(v);
         window.scrollTo(0, v);
         
 //        $('html, body').stop().animate({
