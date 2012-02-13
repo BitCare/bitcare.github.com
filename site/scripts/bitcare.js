@@ -9,15 +9,16 @@ $(function() {
         return false;
     });
 	$('ul#menu a').bind('click touchstart', function(event){
+		event.preventDefault();
         var i = $(this).attr('id').substr(2);
         var v = $('#section-' + i).offset().top - 60;
         
         $('#test').html(v);
-        //window.scrollTo(0, v);
+       // window.scrollTo(0, v);
         
-//        $('html, body').stop().animate({
-//            scrollTop: $($anchor.attr('href')).offset().top - 60
-//        }, 800);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 60
+        }, 800);
         //event.preventDefault();
         return false;
     });

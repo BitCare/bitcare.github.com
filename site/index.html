@@ -5,19 +5,53 @@
 	<link rel="shortcut icon" href="styles/favicon.ico"/>
 	<link href="styles/main.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
-	<script type="text/javascript" src="scripts/bitcare.js"></script>
+	<script type="text/javascript" >
+
+	function showSection(section) {
+		var sections = new Array('about', 'products', 'vacancies', 'contact');
+		for(var j in sections) {
+			if(sections[j] == section) { $('#section-' + sections[j]).show() } else {	$('#section-' + sections[j]).hide() }
+		}		
+	}
+	
+	$(function() {
+		var isMobileSafari = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
+		var sections = new Array('about', 'products', 'vacancies', 'contact');
+
+		// mobile safari styles
+		if(isMobileSafari) {
+			$('#intro').css('position', 'relative');
+			$('#test').html('mobile');
+		}
+		else {
+			$('#header h1 a').click( function(event){
+		        event.preventDefault(); 
+	        	$('html, body').stop().animate({ scrollTop: 0 }, 800);
+		        return false;
+		    });
+	
+			$('ul#menu a').click( function(event){
+				event.preventDefault();
+		        var v = $($(this).attr('href')).offset().top;		        
+	        	$('html, body').stop().animate({ scrollTop: v }, 800);
+		        return false;
+		    }); 
+		}
+	});
+	
+	</script>
 	<title>BitCare - Everything for daycare</title>
 </head>
 <body>
 <div id='header' class='outer'>
 	<div class='inner'>
-		<h1><a href=''>BitCare B.V.</a></h1>
+		<h1><a href='#'>BitCare B.V.</a></h1>
 		<div id='test' style='float: left; width: 100px'></div>
 		<ul id='menu'>
-			<li><a id='m_about' href=''>about</a></li>
-			<li><a id='m_products' href=''>products</a></li>
-			<li><a id='m_vacancies' href=''>vacancies</a></li>
-			<li><a id='m_contact' href=''>contact</a></li>
+			<li><a id='m_about' href='#about'>about</a></li>
+			<li><a id='m_products' href='#products'>products</a></li>
+			<li><a id='m_vacancies' href='#vacancies'>vacancies</a></li>
+			<li><a id='m_contact' href='#contact'>contact</a></li>
 		</ul>
 	</div>
 </div>
@@ -38,7 +72,7 @@
 <div id='scroll' class='outer'>
 	<div id='content' class='outer'>
 		<div class='inner'>
-			<div id='section-about' class='section'>
+			<div id='about' class='section'>
 				<h2>About us</h2>
 				<div>
 					<h3>What we do</h3>
@@ -47,7 +81,7 @@
 					centers, host families and extracurricular care organizations.</p>
 				</div>
 			</div>
-			<div id='section-products' class='section'>
+			<div id='products' class='section'>
 				<h2>Our products</h2>
 				<div>
 					<h3>Tabbel</h3>
@@ -56,7 +90,7 @@
 					<p><a href='https://bit-care.appspot.com' target='_blank'>Go to the Tabbel website</a></p>
 				</div>
 			</div>
-			<div id='section-vacancies' class='section'>
+			<div id='vacancies' class='section'>
 				<h2>Vacancies</h2>
 				<div>
 					<h3>We are nog looking for...</h3>
@@ -67,7 +101,7 @@
 					
 				</div>
 			</div>
-			<div id='section-contact' class='section'>
+			<div id='contact' class='section'>
 				<h2>Contact</h2>
 				<div>
 					<h3>Where to find us</h3>
