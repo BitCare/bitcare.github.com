@@ -12,21 +12,20 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://www.bitcare.com/downloads/blixem.zip</string>
+					<string>http://www.bitcare.com/downloads/bitcare.ipa</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.innovattic.childcare.ChildCareE</string>
+				<string>com.bitcare.ipad.Blixem</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
-
 				<string>software</string>
 				<key>title</key>
-				<string>Blixem</string>
+				<string>Bitcare</string>
 			</dict>
 		</dict>
 	</array>
