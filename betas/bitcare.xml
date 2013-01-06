@@ -12,7 +12,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://download.bitcare.com/beta/bitcare.ipa</string>
+					<string>http://download.bitcare.com/betas/bitcare.ipa</string>
 				</dict>
 			</array>
 			<key>metadata</key>
